@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C3428AA-FB68-40E1-8679-4DA010CC79A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Id3</RootNamespace>
+    <AssemblyName>Id3</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\output\NonPortable\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NonPortable</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\..\output\NonPortable\Debug\Id3.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\output\NonPortable\Release\</OutputPath>
+    <DefineConstants>TRACE;NonPortable</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1591</NoWarn>
+    <DocumentationFile>..\..\output\NonPortable\Release\Id3.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AudioStream\AudioMode.cs" />
+    <Compile Include="AudioStream\AudioStreamException.cs" />
+    <Compile Include="AudioStream\AudioStreamProperties.cs" />
+    <Compile Include="Frames\CommentFrame.cs" />
+    <Compile Include="Frames\DateTimeFrame.cs" />
+    <Compile Include="Frames\FileTypeFrame.cs" />
+    <Compile Include="Frames\Id3Frame.cs" />
+    <Compile Include="Frames\Id3FrameList.cs" />
+    <Compile Include="Frames\Id3SyncFrameList.cs" />
+    <Compile Include="Frames\LengthFrame.cs" />
+    <Compile Include="Frames\ListTextFrame.cs" />
+    <Compile Include="Frames\LyricsFrame.cs" />
+    <Compile Include="Frames\NumericFrame.cs" />
+    <Compile Include="Frames\PictureFrame.cs" />
+    <Compile Include="Frames\PrivateFrame.cs" />
+    <Compile Include="Frames\TextFrame.cs" />
+    <Compile Include="Frames\TextFrameBase.cs" />
+    <Compile Include="Frames\TrackFrame.cs" />
+    <Compile Include="Frames\UnknownFrame.cs" />
+    <Compile Include="Frames\UrlLinkFrame.cs" />
+    <Compile Include="Id3Exception.cs" />
+    <Compile Include="Id3Messages.Designer.cs" />
+    <Compile Include="Id3v1\Id3v1Handler.cs" />
+    <Compile Include="Id3v2\Id3v22Handler.cs" />
+    <Compile Include="Id3v2\Id3v23Handler.cs" />
+    <Compile Include="Id3v2\Id3v23Handler.Frames.cs" />
+    <Compile Include="Id3v2\Id3v24Handler.cs" />
+    <Compile Include="Id3v2\Id3v2Handler.cs" />
+    <Compile Include="Id3v2\Id3v2StandardHeader.cs" />
+    <Compile Include="Id3\DeepTagComparer.cs" />
+    <Compile Include="Id3\FrameHandlers.cs" />
+    <Compile Include="Id3\Id3Handler.cs" />
+    <Compile Include="Id3\Id3Language.cs" />
+    <Compile Include="Id3\Id3Tag.cs" />
+    <Compile Include="Id3\Id3TagFamily.cs" />
+    <Compile Include="Id3\Id3TextEncoding.cs" />
+    <Compile Include="Id3\RegisteredId3Handler.cs" />
+    <Compile Include="Info\FrameTypes.cs" />
+    <Compile Include="Info\InfoProvider.cs" />
+    <Compile Include="Info\InfoProviderAttribute.cs" />
+    <Compile Include="Info\InfoProviderException.cs" />
+    <Compile Include="Info\InfoProviderInputs.cs" />
+    <Compile Include="Info\InfoProviderProperties.cs" />
+    <Compile Include="Internal\AsciiEncoding.cs" />
+    <Compile Include="Internal\AudioStream.cs" />
+    <Compile Include="Internal\ByteArrayHelper.cs" />
+    <Compile Include="Internal\SyncSafeNumber.cs" />
+    <Compile Include="Internal\TextEncodingHelper.cs" />
+    <Compile Include="Mp3Permissions.cs" />
+    <Compile Include="Mp3Stream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WriteConflictAction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Id3Messages.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Frames\FrameBaseClasses.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

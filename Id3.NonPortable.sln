@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{984C6E61-52BD-4454-870E-2CE6A01837F4}"
+	ProjectSection(SolutionItems) = preProject
+		..\license\Stub.cs.txt = ..\license\Stub.cs.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Id3.NonPortable", "Id3.Net\Id3.NonPortable.csproj", "{4C3428AA-FB68-40E1-8679-4DA010CC79A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Id3.Files.NonPortable", "Id3.Net.Files\Id3.Files.NonPortable.csproj", "{EC8BC7E0-3BE7-437A-8419-BC9D620D08A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Id3.WinForms.NonPortable", "Id3.Net.WinForms\Id3.WinForms.NonPortable.csproj", "{72E9392F-D4FF-40BD-B1AC-318EC1F15F72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Id3.Serialization.NonPortable", "Id3.Serialization\Id3.Serialization.NonPortable.csproj", "{F64CF5F1-FEFE-45EB-909A-908158825141}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{AAF36B2C-4A80-437E-946B-B0CC83BBF672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Id3.Tests.NonPortable", "Id3.Net.Tests\Id3.Tests.NonPortable.csproj", "{1D508147-3404-4EAE-95E4-421AB210CC18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C3428AA-FB68-40E1-8679-4DA010CC79A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3428AA-FB68-40E1-8679-4DA010CC79A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3428AA-FB68-40E1-8679-4DA010CC79A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3428AA-FB68-40E1-8679-4DA010CC79A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8BC7E0-3BE7-437A-8419-BC9D620D08A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8BC7E0-3BE7-437A-8419-BC9D620D08A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8BC7E0-3BE7-437A-8419-BC9D620D08A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8BC7E0-3BE7-437A-8419-BC9D620D08A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E9392F-D4FF-40BD-B1AC-318EC1F15F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E9392F-D4FF-40BD-B1AC-318EC1F15F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E9392F-D4FF-40BD-B1AC-318EC1F15F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E9392F-D4FF-40BD-B1AC-318EC1F15F72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F64CF5F1-FEFE-45EB-909A-908158825141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F64CF5F1-FEFE-45EB-909A-908158825141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F64CF5F1-FEFE-45EB-909A-908158825141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F64CF5F1-FEFE-45EB-909A-908158825141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D508147-3404-4EAE-95E4-421AB210CC18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D508147-3404-4EAE-95E4-421AB210CC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D508147-3404-4EAE-95E4-421AB210CC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D508147-3404-4EAE-95E4-421AB210CC18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC8BC7E0-3BE7-437A-8419-BC9D620D08A5} = {AAF36B2C-4A80-437E-946B-B0CC83BBF672}
+		{F64CF5F1-FEFE-45EB-909A-908158825141} = {AAF36B2C-4A80-437E-946B-B0CC83BBF672}
+		{72E9392F-D4FF-40BD-B1AC-318EC1F15F72} = {AAF36B2C-4A80-437E-946B-B0CC83BBF672}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		CodeStyleEnforcer_Active = 
+		CodeStyleEnforcer_RulesLocation = 
+	EndGlobalSection
+EndGlobal
