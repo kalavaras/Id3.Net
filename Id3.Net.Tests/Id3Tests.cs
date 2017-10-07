@@ -17,7 +17,7 @@ namespace Id3.Tests
         [Fact]
         public void BasicTests()
         {
-            using (var mp3 = new Mp3File(@"y:\music\mp3\heavy\Finntroll\Jaktens tid\09-vargtimmen-rda.mp3"))
+            using (var mp3 = new Mp3File(@"g:\music\mp3\jpop\HIGH and MIGHTY COLOR - GooVER\11 HIGH and MIGHTY COLOR - With YOU.mp3"))
             {
                 Id3Tag tag = mp3.GetTag(Id3TagFamily.Version2x);
                 Assert.NotNull(tag);

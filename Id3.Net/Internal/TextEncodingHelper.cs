@@ -50,7 +50,7 @@ namespace Id3.Internal
             Encoding encoding = GetEncoding(encodingType);
             string str = encoding.GetString(bytes, start, count);
 
-            if (encodingType == Id3TextEncoding.Unicode)
+            if (encodingType == Id3TextEncoding.Unicode && str.Length > 0)
             {
                 if (str[0] == '\xFFFE' || str[0] == '\xFEFF')
                     str = str.Remove(0, 1);
