@@ -33,7 +33,7 @@ namespace Id3.Internal
 
         internal static string GetDefaultString(byte[] bytes, int start, int count)
         {
-            return GetDefaultEncoding().GetString(bytes, start, count);
+            return GetString(bytes, start, count, Id3TextEncoding.Iso8859_1);
         }
 
         internal static Encoding GetEncoding(Id3TextEncoding encodingType)

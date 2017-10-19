@@ -28,6 +28,19 @@ namespace Id3.Tests
         }
 
         [Fact]
+        public void ShiftjisTests()
+        {
+            using (var mp3 = new Mp3File(@"Y:\music\mp3\pelit\Touhou\[DDBY]\2008.12.29 東方幻想曲 [C75]\DDBY - 二番目に愛した人.mp3"))
+            {
+                Id3Tag tag = mp3.GetTag(Id3TagFamily.Version1x);
+                Assert.NotNull(tag);
+                Assert.True(tag.IsSupported);
+                foreach (Id3Frame frame in tag)
+                    Console.WriteLine(frame);
+            }
+        }
+
+        [Fact]
         public void DevTests()
         {
             using (var mp3 = new Mp3File(@"E:\Temp\Audio\BasicTagsWithImage.mp3", Mp3Permissions.ReadWrite))
