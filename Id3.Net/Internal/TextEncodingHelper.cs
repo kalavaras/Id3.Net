@@ -17,6 +17,7 @@ limitations under the License.
 */
 #endregion
 
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
@@ -44,12 +45,21 @@ namespace Id3.Internal
             Debug.Assert(false, "Invalid Encoding type specified");
             return null;
         }
-
+        
         internal static string GetString(byte[] bytes, int start, int count, Id3TextEncoding encodingType)
         {
             Encoding encoding = GetEncoding(encodingType);
             string str = encoding.GetString(bytes, start, count);
 
+            if(encodingType == Id3TextEncoding.Iso8859_1 && ShiftJisDetector.Detect(bytes, start, count))
+            {
+                var shiftJis = Encoding.GetEncoding(932);
+                str = shiftJis.GetString(bytes, start, count);
+            } else
+            {
+                str = encoding.GetString(bytes, start, count);
+            }
+          
             if (encodingType == Id3TextEncoding.Unicode && str.Length > 0)
             {
                 if (str[0] == '\xFFFE' || str[0] == '\xFEFF')
