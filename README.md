@@ -1,4 +1,4 @@
-# Id3.Net Tag Libary
+# Id3.Net Tag Library
 
 This is a .Net library for ID3 tag reading from MP3 files.
 
