@@ -4,6 +4,14 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <FileVersion>1.0.1.0</FileVersion>
     <PackageVersion>1.0.1</PackageVersion>
+    <PackageId>Kalavaras.ID3.Files</PackageId>
+    <Authors>Jeevan James, Kalavaras</Authors>
+    <Description>Fork of ID3.Files Package</Description>
+    <Company />
+    <Product />
+    <PackageProjectUrl>https://github.com/kalavaras/Id3.Net</PackageProjectUrl>
+    <PackageTags>ID3, MP3, Music</PackageTags>
+    <PackageLicenseUrl>https://github.com/kalavaras/Id3.Net/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>bin\</OutputPath>
